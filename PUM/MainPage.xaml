@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PUM.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" IsVisible="false" />
+        
+        <StackLayout VerticalOptions="Center" Margin="0,120,0,0">
+            <Label Text="Weryfikacja polskich NIP"
+                   HorizontalOptions="Center"
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   TextColor="IndianRed"/>
+            <Entry Placeholder="Wprowadź nip do sprawdzenia" 
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            <Button Text="Weryfikuj"
+                    BackgroundColor="IndianRed"
+                    WidthRequest="250"
+                    HeightRequest="40"
+                    HorizontalOptions="Center"
+                    BorderRadius="10"/>
+
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

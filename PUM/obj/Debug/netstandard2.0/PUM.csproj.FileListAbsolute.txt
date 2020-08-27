@@ -1,0 +1,14 @@
+C:\Users\szczepkowski\source\repos\PUM\PUM\bin\Debug\netstandard2.0\PUM.deps.json
+C:\Users\szczepkowski\source\repos\PUM\PUM\bin\Debug\netstandard2.0\PUM.dll
+C:\Users\szczepkowski\source\repos\PUM\PUM\bin\Debug\netstandard2.0\ref\PUM.dll
+C:\Users\szczepkowski\source\repos\PUM\PUM\bin\Debug\netstandard2.0\PUM.pdb
+C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\PUM.csprojAssemblyReference.cache
+C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\PUM.AssemblyInfoInputs.cache
+C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\PUM.AssemblyInfo.cs
+C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\PUM.csproj.CoreCompileInputs.cache
+C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\PUM.dll
+C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\ref\PUM.dll
+C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\PUM.pdb
