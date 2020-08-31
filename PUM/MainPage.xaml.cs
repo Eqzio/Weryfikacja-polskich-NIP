@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using PUM.Models;
+using PUM.ViewModels;
+using PUM.Views;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace PUM
@@ -16,6 +14,25 @@ namespace PUM
         public MainPage()
         {
             InitializeComponent();
+
+            BindingContext = new MainPageViewModel(Navigation);
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            VerificationHistoryListView.ItemsSource = await App.Database.GetVerifiedNIPAsync();
+        }
+
+        private async void VerificationHistoryListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem != null)
+            {
+                await Navigation.PushAsync(new DetailsPage
+                {
+                    BindingContext = e.SelectedItem as VerificationDetails.VerifiedNIP
+                });
+            }
         }
     }
 }

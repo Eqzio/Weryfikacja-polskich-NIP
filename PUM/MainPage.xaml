@@ -3,31 +3,72 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:PUM.ViewModels"
+             xmlns:behaviors="clr-namespace:PUM.Behaviors"
+             xmlns:utilities="clr-namespace:PUM.Utilities"
              mc:Ignorable="d"
-             x:Class="PUM.MainPage">
+             x:Class="PUM.MainPage"
+             Title="Weryfikacja polskich NIP">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" IsVisible="false" />
-        
         <StackLayout VerticalOptions="Center" Margin="0,120,0,0">
             <Label Text="Weryfikacja polskich NIP"
                    HorizontalOptions="Center"
                    FontSize="30"
                    FontAttributes="Bold"
                    TextColor="IndianRed"/>
+            
+            <Label Text="NIP powinien się składać z 10 cyfr"
+                   HorizontalOptions="Center"
+                   TextColor="Red"
+                   FontAttributes="Bold"
+                   Margin="0,0,0,-15"
+                   IsVisible="{Binding IsNipNotValid}"/>
+            
             <Entry Placeholder="Wprowadź nip do sprawdzenia" 
                    HorizontalTextAlignment="Center"
                    HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
+                   VerticalOptions="Center"
+                   Text="{Binding Nip}">
+                <Entry.Behaviors>
+                    <behaviors:NipValidationBehavior/>
+                </Entry.Behaviors>
+            </Entry>
+
             <Button Text="Weryfikuj"
                     BackgroundColor="IndianRed"
                     WidthRequest="250"
                     HeightRequest="40"
                     HorizontalOptions="Center"
-                    BorderRadius="10"/>
+                    BorderRadius="10"
+                    Command="{Binding VerifyNipCommand}">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button" Binding="{Binding IsNipNotValid}" Value="True">
+                        <Setter Property="IsEnabled" Value="False"/>
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+            
+            <Label Text="Historia weryfikacji"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,5"/>
+            
+            <ScrollView HorizontalOptions="Center" WidthRequest="320" HeightRequest="300" VerticalOptions="FillAndExpand">
+                <ListView x:Name="VerificationHistoryListView" 
+                          VerticalOptions="CenterAndExpand" 
+                          HorizontalOptions="CenterAndExpand"
+                          ItemsSource="{Binding VerifiedNips}"
+                          ItemSelected="VerificationHistoryListView_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding nip}"
+                                      Detail="{Binding name}"
+                                      TextColor="Black"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
 
         </StackLayout>
 
