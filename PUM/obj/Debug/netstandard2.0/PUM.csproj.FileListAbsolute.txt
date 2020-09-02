@@ -12,5 +12,4 @@ C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\PUM.pdb
 C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\PUM.csproj.CoreCompileInputs.cache
 C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\Views\DetailsPage.xaml.g.cs
-C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\Views\ListViewPage1.xaml.g.cs
 C:\Users\szczepkowski\source\repos\PUM\PUM\obj\Debug\netstandard2.0\PUM.csprojAssemblyReference.cache

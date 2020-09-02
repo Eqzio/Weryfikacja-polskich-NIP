@@ -8,7 +8,8 @@
              xmlns:utilities="clr-namespace:PUM.Utilities"
              mc:Ignorable="d"
              x:Class="PUM.MainPage"
-             Title="Weryfikacja polskich NIP">
+             Title="Weryfikacja polskich NIP"
+             NavigationPage.HasNavigationBar="False">
 
     <StackLayout>
         <StackLayout VerticalOptions="Center" Margin="0,120,0,0">
